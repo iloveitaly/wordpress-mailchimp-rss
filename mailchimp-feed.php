@@ -4,9 +4,11 @@
 Plugin Name: MailChimpFeed
 Description: Custom RSS feed to work better with MC
 Version: 1.1
-Author: Michael Bianco
-Author URI: http://github.com/iloveitaly/
+License: MIT
 
+Author: Michael Bianco
+Author URI: http://cliffsidemedia.com/
+Plugin URI: https://github.com/iloveitaly/wordpress-mailchimp-rss
 */
 
 function iloveitaly_format_feed_for_mailchimp($content) {
