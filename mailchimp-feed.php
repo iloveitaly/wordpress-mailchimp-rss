@@ -11,20 +11,23 @@ Author URI: http://cliffsidemedia.com/
 Plugin URI: https://github.com/iloveitaly/wordpress-mailchimp-rss
 */
 
+define('MCRSS_IFRAME_REGEX', '#<iframe.+?src="([^"]+)[^>]+></iframe>#i');
+
 function iloveitaly_format_feed_for_mailchimp($content) {
-  if(is_feed()) {
-  	// note: depends on an unreleased youtube video plugin
-  	if(function_exists("iloveitaly_iframe_to_image")) {
-    	$content = iloveitaly_iframe_to_image($content);
-  	}
-
-    // blockquotes don't render well in HTML email
-    $content = str_replace("<blockquote><p>", "<p class='blockquote'>", $content);
-    $content = str_replace("</p></blockquote>", "</p>", $content);
-
-    // link all images to the post
-    $content = preg_replace('#<img [^>]*src="([^"]+)"[^>]*>#', "<a target='_blank' href='".get_permalink().'\'>$0</a>', $content);
+  // note: depends on an unreleased youtube video plugin
+  if(function_exists("iloveitaly_iframe_to_image")) {
+    $content = iloveitaly_iframe_to_image($content);
   }
+
+  // can't do any iframes in HTML emails
+  $content = preg_replace(MCRSS_IFRAME_REGEX, "<a target='_blank' href='".get_permalink().'\'>View in Browser</a>', $content);
+
+  // blockquotes don't render well in HTML email
+  $content = str_replace("<blockquote><p>", "<p class='blockquote'>", $content);
+  $content = str_replace("</p></blockquote>", "</p>", $content);
+
+  // link all images to the post
+  $content = preg_replace('#<img [^>]*src="([^"]+)"[^>]*>#', "<a target='_blank' href='".get_permalink().'\'>$0</a>', $content);
 
   return $content;
 }
