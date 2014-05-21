@@ -1,0 +1,137 @@
+/* Pulled From MC Templates
+ *****************************/
+
+/*////// RESET STYLES //////*/
+body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+table{border-collapse:collapse;}
+img, a img{border:0; outline:none; text-decoration:none;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+
+/*////// CLIENT-SPECIFIC STYLES //////*/
+.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+/* WordPress RSS Email Support
+ *****************************/
+
+img.alignright {
+  float: right;
+  padding-left: 20px;
+}
+
+img.alignleft {
+  float:left;
+  padding-right: 20px;
+}
+
+/* Standard Elements
+ *****************************/
+
+p {margin: 0 0 10px 0;}
+
+p, td, div {
+  color: #262626;
+  font-family:Helvetica, Lucida Grande, sans-serif;
+  font-size:15px;
+  line-height:150%;
+  text-align:left;
+}
+
+a:link,a:visited, a .yshortcuts{
+  color:#26ABE2;
+  font-weight:normal;
+  text-decoration:underline;
+}
+
+img {
+  display:inline;
+  height:auto;
+  max-width:600px;
+}
+
+/* Blockquote
+ *****************************/
+
+.blockquote {
+  font-family: Georgia, serif;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Header Styles
+ *****************************/
+
+h1{
+  color:#404040;
+  display:block;
+  font-family:"Helvetica Neue",Helvetica, Arial, sans-serif;
+  font-size:30px;
+  font-style:normal;
+  font-weight:200;
+  line-height:125%;
+  letter-spacing:normal;
+  margin-top:0;
+  margin-right:0;
+  margin-bottom:10px;
+  margin-left:0;
+  text-align:left;
+}
+
+h2{
+  color:#333333;
+  display:block;
+  font-family:"Helvetica Neue",Helvetica, Arial, sans-serif;
+  font-size:20px;
+  font-style:normal;
+  font-weight:normal;
+  line-height:125%;
+  letter-spacing:normal;
+  margin-top:0;
+  margin-right:0;
+  margin-bottom:10px;
+  margin-left:0;
+  text-align:left;
+}
+
+h3{
+  color:#606060;
+  display:block;
+  font-family:Arial;
+  font-size:16px;
+  font-style:normal;
+  font-weight:bold;
+  line-height:125%;
+  letter-spacing:normal;
+  margin-top:0;
+  margin-right:0;
+  margin-bottom:10px;
+  margin-left:0;
+  text-align:left;
+}
+
+h4{
+  color:#808080;
+  display:block;
+  font-family:Arial;
+  font-size:12px;
+  font-style:normal;
+  font-weight:bold;
+  line-height:100%;
+  letter-spacing:normal;
+  margin-top:0;
+  margin-right:0;
+  margin-bottom:10px;
+  margin-left:0;
+  text-align:left;
+}
